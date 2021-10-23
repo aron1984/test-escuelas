@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 
+
 import { escuelas } from 'src/assets/data/escuelas_list';
 
 
@@ -23,24 +24,28 @@ export class MapaComponent implements OnInit {
 
     /*VAMOS A AGREGAR LOS PUNTOS AL MAPA*/
       
-          // CREAMOS ICONO
+          /* CREAMOS ICONO*/
           function createCustomIcon (_feature: any, latlng: L.LatLngExpression) {
             var myIconEsc = L.icon({
               iconUrl: '../../assets/img/esc_full_web.svg',
-              iconSize: [30, 30], /*tamaño de lado por lado*/
-              iconAnchor: [15, 20], /*posicion horizontal y vertical respectivamente: puede que al hacer zoom se vea desplazado, hay que tener cuidado.*/
+              iconSize: [30, 30], 
+              iconAnchor: [15, 20], 
               popupAnchor: [-3, -25],
               
               
-          })
-          return L.marker(latlng, { icon: myIconEsc })
-        }
-  
+              })
+              return L.marker(latlng, { icon: myIconEsc })
+            }
+            
+           
+
            
           // SE CREA UNA VARIABLE DE OPCIONES, QUE SE PASARÁ COMO SEGUNDO ARGUMENTO DESPUES.
          let myLayerOptions = {
+         
           pointToLayer: createCustomIcon,
           onEachFeature: function (feature:any, layer:any) {
+
             layer.bindPopup('<h3>'+feature.properties.Nombre+'</h3><p>Dirección: '+feature.properties.Dirección+'</p>'+'<p>Gestión: '+feature.properties.Gestión+'</p>'+'<p>Descripción: '+feature.properties.Descripcion+'<p/>'+'<p>RRSS: <a href="'+feature.properties.RRSS+'">Visitar</a></p>'+'<p>Latitud: '+feature.properties.lat+' - Longitud: '+feature.properties.lng+'</p>');
           }
           }
@@ -51,8 +56,7 @@ export class MapaComponent implements OnInit {
           L.geoJSON(newGeoJson, myLayerOptions).addTo(mimapa);
 
          /*Leyenda*/
-              
-        
+           
 
        
   }
