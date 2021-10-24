@@ -1,40 +1,110 @@
-#mapid { height: 500px; }
+html{
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin:0px auto;
+}
+#map { 
+  margin-top: 3rem;
+  height: 40rem; 
+}
+
+.infoPopUp p{
+  color: #222222;
+
+}
+
+.leaflet-popup-content p {
+  margin: 0.3rem 0;
+}
+
+.colorLila{
+  color:#5b4282;
+}
+
+#alumnoslist h4, h5,h6, p{
+  color: #5b4282
+
+}
+
+#alumnoslist li{
+  list-style:none;
+  color: #FF62AA;
+  font-size: 0.7rem;
+}
+
+#alumnoslist ul{
+  padding: 0px 0px 0px 0.5rem;
+}
+iframe{
+  width: 100%;
+  height: 35rem;
+}
+
+.offcanvas-body{
+  background-color: rgba(rgba(233, 233, 233, 0.514), green, blue, alpha);
+}
+
+/* ~~~~~~~~~~~~~ sx size 0px to 360px ~~~~~~~~~~~~~~~~*/
+@media (min-width: 0px){
+  
+  h1{
+    font-size: 1.5rem;
+  }
+
+  .bg-lila{
+    background-color: #5b4282;
+    padding-top: 0.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    color: whitesmoke;
+  }
+  
+}
+
+/* ~~~~~~~~~~~~~ sx size 360px en adelante ~~~~~~~~~~~~~~~~*/
+
+@media (min-width: 361px){
+  h1{
+    font-size: 2rem;
+  }
+  
+  header{
+    background-color: #5b4282;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+
+    color: whitesmoke;
+  }
+
+  
+}
 
 
-/* Leyenda */
-/*Legend specific*/
-.legend {
-    padding: 6px 8px;
-    font: 14px Arial, Helvetica, sans-serif;
-    background: white;
-    background: rgba(255, 255, 255, 0.8);
-    /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/
-    /*border-radius: 5px;*/
-    line-height: 24px;
-    color: #555;
+/* ~~~~~~~~~~~~~ lg size 992px en adelante ~~~~~~~~~~~~~~~~*/
+
+@media (min-width: 993px){
+  .navbar{
+    height: 6rem;
   }
-  .legend h4 {
-    text-align: center;
-    font-size: 16px;
-    margin: 2px 12px 8px;
-    color: #777;
+
+  #map { 
+    margin-top: 6rem;
+    height: 40rem; 
   }
-  
-  .legend span {
-    position: relative;
-    bottom: 3px;
+
+  #about{
+    margin-top: 6rem;
   }
-  
-  .legend i {
-    width: 18px;
-    height: 18px;
-    float: left;
-    margin: 0 8px 0 0;
-    opacity: 0.7;
+
+  #contacto{
+    margin-top: 6rem;
   }
-  
-  .legend i.icon {
-    background-size: 18px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  
+
+}
