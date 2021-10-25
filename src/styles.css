@@ -6,6 +6,8 @@ html{
 body{
   margin:0px auto;
 }
+
+
 #map { 
   margin-top: 3rem;
   height: 40rem; 
@@ -47,6 +49,35 @@ iframe{
   background-color: rgba(rgba(233, 233, 233, 0.514), green, blue, alpha);
 }
 
+.lista li{
+  list-style: none;
+  color: #222222;
+  padding-left: 1.5rem;
+}
+
+.img{
+  width: 2rem;
+  vertical-align:middle;
+  margin-right: 1rem;
+}
+
+#alejoFooter{
+  width: 1.2rem;
+  margin-right: 0.5rem ;
+  vertical-align: middle;
+}
+
+footer{
+  background-color: #5b4282;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+
+
+
+
 /* ~~~~~~~~~~~~~ sx size 0px to 360px ~~~~~~~~~~~~~~~~*/
 @media (min-width: 0px){
   
@@ -63,7 +94,44 @@ iframe{
 
     color: whitesmoke;
   }
-  
+  #its{
+    width: 15rem;
+    margin:1rem 2rem 1rem 2rem;
+    align-items: center;
+  }
+  .infoEsc{
+    
+    text-align: justify;
+  }
+  p{
+    text-align: justify;
+  }
+  #about{
+    margin-top: 4rem;
+  }
+
+  #contacto{
+    margin-top: 4rem;
+  }
+
+  .container-fluid{
+    padding-left: 0px;
+}
+#imgContacto{
+  width:8rem;
+  margin: 1rem 0rem 1rem 6rem;
+}
+
+span{
+  color: #5b4282;
+  font-weight: bold;
+}
+
+#contentImg{
+  width: 100%;
+}
+
+
 }
 
 /* ~~~~~~~~~~~~~ sx size 360px en adelante ~~~~~~~~~~~~~~~~*/
@@ -82,7 +150,20 @@ iframe{
 
     color: whitesmoke;
   }
+  .infoEsc{
+    padding-left: 2rem;
+    text-align: justify;
+  }
+  #its{
+    width: 15rem;
+    margin:0 auto;
+    align-items: center;
+  }
 
+  #imgContacto{
+    width:8rem;
+    margin: 2rem 1rem 1rem 6rem;
+  }
   
 }
 
@@ -105,6 +186,26 @@ iframe{
 
   #contacto{
     margin-top: 6rem;
+  }
+
+  .tituloPaginas h2{
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    color:#222222;
+  }
+  
+  .infoEsc{
+    padding-left: 3rem;
+  }
+
+  hr{
+    border: 1px solid #FF62AA;
+  }
+  .container-fluid{
+    padding-left: 3rem;
+  }
+  .navbar-brand{
+    font-size: 2rem;
   }
 
 }
